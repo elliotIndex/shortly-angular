@@ -11,8 +11,19 @@ angular.module('shortly.services', [])
     });
   };
 
+  var addOne = function () {
+    return $http({
+      method: 'POST',
+      url: '/api/links'
+    })
+    .then(function (link) {
+      return link;
+    });
+  };
+
   return {
-    getAll: getAll
+    getAll: getAll,
+    addOne: addOne
   };
 })
 .factory('Auth', function ($http, $location, $window) {
