@@ -7,10 +7,12 @@
     <li><a href='#/logout' class='logout'>Logout</a></li>
   </ul>
   </div>
-  <div id='shorten-container' ng-controller="ShortenController">
-    <input ng-model="inputLink">
-    <button ng-click="addLink(inputLink)">Add Link</button>
-  </div>  
+  <div id="shorten-container" ng-controller="ShortenController">
+    <form name="addLinkForm" ng-submit="addLink(inputLink)">
+      <input type="text" ng-model="inputLink">
+      <button>Add Link</button>
+    </form>  
+  </div>
 </div>
 
 
