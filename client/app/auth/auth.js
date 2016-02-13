@@ -13,7 +13,7 @@ angular.module('shortly.auth', [])
         $location.path('/links');
       })
       .catch(function (error) {
-        console.error(error);
+        alert('Invalid username and/or password');
       });
   };
 
@@ -24,7 +24,7 @@ angular.module('shortly.auth', [])
         $location.path('/links');
       })
       .catch(function (error) {
-        console.error(error);
+        alert('Invalid username and/or password');
       });
   };
 
