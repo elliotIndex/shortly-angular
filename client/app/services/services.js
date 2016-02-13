@@ -19,6 +19,9 @@ angular.module('shortly.services', [])
     })
     .then(function (link) {
       return link;
+    })
+    .catch(function (error) {
+      alert('Invalid url');
     });
   };
 
