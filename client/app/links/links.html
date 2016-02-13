@@ -1,16 +1,16 @@
 <div id='container'>
   <h1>Links</h1>
   <div class='navigation'>
-  <ul>
-    <li><a href='#/links' class='index'>All Links</a></li>
-    <li><a href='#/shorten' class='create'>Shorten</a></li>
-    <li><a href='#/signout' class='signout'>Sign Out</a></li>
-  </ul>
+  <ul ng-controller="AuthController">
+      <li><a href='#/links' class='index'>All Links</a></li>
+      <li><a href='#/shorten' class='create'>Shorten</a></li>
+      <li><a href='#/signin' ng-click="signout()" class='signout'>Sign Out</a></li>
+    </ul>
   </div>
   <div id='container'></div>
   
   <div>Alexxis loves pomander the unicorn</div>
   <ul>
-    <li ng-repeat="link in $scope.getAll()"> {{ link }}</li>
+    <li ng-repeat="link in links"> {{ link }}</li>
   </ul>
 </div>
