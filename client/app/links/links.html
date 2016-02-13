@@ -8,8 +8,14 @@
     </ul>
   </div>
   <div id='container'></div>
+  <div id='linkSearch'>
+    <form name="addLinkForm" ng-submit="addLink(inputLink)">
+      <input type='text' placeholder="Filter Links" ng-model='linkSearchInput'>
+    </form>
+  </div>
   <ul>
-    <li class="link" ng-repeat="link in data.links | orderBy:'-visits'">
+    <li class="link"
+        ng-repeat="link in data.links | orderBy:'-visits' | filter:linkSearchInput">
       <img src="../assets/redirect_icon.png">
       <div class="visits">
         <span class="count">{{ link.visits }}</span>Visits
